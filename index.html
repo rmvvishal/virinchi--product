@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Stores · Media equipment desk</title>
+    <meta
+      name="description"
+      content="Work a shift at a fictional campus equipment desk in this interactive product engineering exercise."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./domain.js"></script>
+    <script defer src="./app.js"></script>
+    <script defer src="./tour.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#view">Skip to main content</a>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      aria-hidden="true"
+      class="icon-library"
+    >
+      <symbol id="icon-package-open" viewBox="0 0 24 24">
+        <path d="M12 22v-9" />
+        <path
+          d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z"
+        />
+        <path
+          d="M20 13v3.87a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13"
+        />
+        <path
+          d="M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.63 0L3 4.57a1.93 1.93 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z"
+        />
+      </symbol>
+      <symbol id="icon-package" viewBox="0 0 24 24">
+        <path
+          d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+        />
+        <path d="M12 22V12" />
+        <polyline points="3.29 7 12 12 20.71 7" />
+        <path d="m7.5 4.27 9 5.15" />
+      </symbol>
+      <symbol id="icon-clipboard-list" viewBox="0 0 24 24">
+        <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+        <path
+          d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+        />
+        <path d="M12 11h4" />
+        <path d="M12 16h4" />
+        <path d="M8 11h.01" />
+        <path d="M8 16h.01" />
+      </symbol>
+      <symbol id="icon-book-open" viewBox="0 0 24 24">
+        <path d="M12 7v14" />
+        <path
+          d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+        />
+      </symbol>
+      <symbol id="icon-messages-square" viewBox="0 0 24 24">
+        <path
+          d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+        />
+        <path
+          d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"
+        />
+      </symbol>
+      <symbol id="icon-gauge" viewBox="0 0 24 24">
+        <path d="m12 14 4-4" />
+        <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+      </symbol>
+      <symbol id="icon-undo" viewBox="0 0 24 24">
+        <path d="M9 14 4 9l5-5" />
+        <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+      </symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24">
+        <path
+          d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+        />
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+        <path d="M18 17V9" />
+        <path d="M13 17V5" />
+        <path d="M8 17v-3" />
+      </symbol>
+      <symbol id="icon-history" viewBox="0 0 24 24">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+        <path d="M3 3v5h5" />
+        <path d="M12 7v5l4 2" />
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <path
+          d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+        />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="icon-bell" viewBox="0 0 24 24">
+        <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+        <path
+          d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+        />
+      </symbol>
+      <symbol id="icon-scan" viewBox="0 0 24 24">
+        <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+        <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+        <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+        <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+        <path d="M7 12h10" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.3-4.3" />
+      </symbol>
+    </svg>
+    <main>
+      <div id="campus-stores">
+        <div class="examstrip">
+          <span>Product Engineer practical</span>
+          <button type="button" class="demo-start" data-demo-start hidden>
+            ▶ Guided demo
+          </button>
+          <details>
+            <summary>Candidate brief</summary>
+            <div class="briefcopy">
+              <h2>Would you keep this product?</h2>
+              <p>
+                Work a shift at the campus media desk. Get the Film Society’s
+                kit out for its screening, handle the return, and leave the next
+                shift enough information to finish the job. Use the time control
+                to move the story forward.
+              </p>
+              <p>
+                Show one moment the product handles well and one moment you
+                would change. Use a specific action or decision from your shift
+                as evidence for each.
+              </p>
+              <p>
+                Sketch or prototype your change. Walk us through the same job
+                using it, explain what you would keep, and name one observation
+                at a real counter that would tell you whether it helped.
+              </p>
+              <p>
+                Use any tools you like, including AI assistants, web search,
+                and design or coding tools.
+              </p>
+            </div>
+          </details>
+        </div>
+        <header class="mast">
+          <div class="brandblock">
+            <div class="brandmark" aria-hidden="true">
+              <svg aria-hidden="true" class="store-icon">
+                <use href="#icon-package-open"></use>
+              </svg>
+            </div>
+            <div>
+              <h1>Campus Stores</h1>
+              <div class="muted">Media equipment desk</div>
+            </div>
+          </div>
+          <div class="tools">
+            <div class="gsearch" data-gsearch>
+              <label class="sr" for="gsearch">Search everything</label>
+              <svg aria-hidden="true" class="store-icon"><use href="#icon-search"></use></svg>
+              <input
+                id="gsearch"
+                type="search"
+                placeholder="Search units, slips, people…  /"
+                autocomplete="off"
+                role="combobox"
+                aria-expanded="false"
+                aria-controls="gresults"
+                aria-autocomplete="list"
+              />
+              <div id="gresults" class="popover" role="listbox" hidden></div>
+            </div>
+            <div class="bellwrap">
+              <button
+                type="button"
+                class="iconbtn"
+                data-action="bell"
+                aria-expanded="false"
+                aria-controls="notifs"
+                data-bell
+              ></button>
+              <div id="notifs" class="popover notifs" hidden></div>
+            </div>
+            <div class="who" data-who></div>
+            <div class="clock">
+              <small>Desk time</small><strong data-clock></strong>
+            </div>
+          </div>
+        </header>
+        <aside class="shift" data-shiftbar aria-label="Sample shift">
+          <div>
+            <b data-shift-title></b>
+            <p data-shift></p>
+          </div>
+          <button type="button" data-action="advance"></button>
+        </aside>
+        <div class="shell">
+          <nav aria-label="Desk" data-nav></nav>
+          <section class="page" aria-label="Selected page">
+            <div
+              class="flash"
+              data-flash
+              role="status"
+              aria-live="polite"
+              tabindex="-1"
+              hidden
+            ></div>
+            <div id="view" data-view></div>
+          </section>
+        </div>
+        <div class="statusbar">
+          <span data-mode></span
+          ><button type="button" data-action="restart">
+            Restart sample shift
+          </button>
+        </div>
+        <dialog data-dialog aria-labelledby="dlg-title"></dialog>
+      </div>
+    </main>
+    <div id="print-root" aria-hidden="true"></div>
+  </body>
+</html>

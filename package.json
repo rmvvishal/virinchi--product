@@ -1,0 +1,20 @@
+{
+  "name": "campus-stores",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Campus media equipment desk: issue, return, handover, maintenance and reporting.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/domain.test.js tests/server.test.js",
+    "test:e2e": "node --test tests/e2e.test.js",
+    "test:all": "node --test tests/"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.1",
+    "playwright": "^1.49.0"
+  }
+}
